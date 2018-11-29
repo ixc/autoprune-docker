@@ -1,6 +1,6 @@
 # autoprune
 
-A Docker image that prunes images with no associated containers, daily.
+Docker image that prunes images with no associated containers, daily.
 
 
 # Usage
