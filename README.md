@@ -2,8 +2,7 @@
 
 Docker image that prunes images with no associated containers, daily.
 
-
-# Usage
+## Usage
 
 Run:
 
