@@ -1,6 +1,6 @@
 # autoprune
 
-Docker image that prunes build cache and images with no associated containers, daily.
+Docker image that prunes build cache, buildx cache and images with no associated containers, daily.
 
 ## Usage
 
