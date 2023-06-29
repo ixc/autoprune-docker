@@ -12,11 +12,11 @@ jobs:
       - linux
       - self-hosted
     steps:
-      - uses: docker/login-action@v1
+      - uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-      - uses: docker/build-push-action@v2
+      - uses: docker/build-push-action@v4
         with:
           no-cache: ${{ github.event_name == 'schedule' }}
           push: true
@@ -36,7 +36,7 @@ jobs:
       - linux
       - self-hosted
     steps:
-      - uses: docker/login-action@v1
+      - uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
@@ -71,8 +71,8 @@ jobs:
     runs-on:
       - self-hosted
     steps:
-      - uses: actions/checkout@v2
-      - uses: peter-evans/dockerhub-description@v2
+      - uses: actions/checkout@v3
+      - uses: peter-evans/dockerhub-description@v3
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
